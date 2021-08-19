@@ -17,5 +17,5 @@ class QuoteModel():
         Raises:
         None
         """
-        self._body = body
-        self._author = author
+        self.body = body
+        self.author = author
