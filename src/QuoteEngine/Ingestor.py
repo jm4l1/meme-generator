@@ -15,14 +15,11 @@ class Ingestor(IngestorInterface):
 
     ingestors = [CSVIngestor, DOCXIngestor, PDFIngestor, TXTIngestor]
 
-    def __init__(self):
-        print("creating Ingestor")
-
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
         """Parse input file into list of QuoteModel objects.
 
-        Arguments:
+        Parameters:
         path {str} : The path of the input file to be tested.
 
         Returns
@@ -31,7 +28,6 @@ class Ingestor(IngestorInterface):
         Raises:
         None
         """
-        print(f"parsing path at {path}")
         for ingestor in cls.ingestors:
             if ingestor.can_ingest(path):
                 try:

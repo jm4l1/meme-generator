@@ -21,7 +21,7 @@ class CSVIngestor(IngestorInterface):
     def parse(cls, path: str) -> List[QuoteModel]:
         """Parse input file into list of QuoteModel objects.
 
-        Arguments:
+        Parameters:
         path {str} : The path of the input file to be tested.
 
         Returns

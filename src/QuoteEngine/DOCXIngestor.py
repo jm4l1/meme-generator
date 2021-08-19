@@ -20,7 +20,7 @@ class DOCXIngestor(IngestorInterface):
     def parse(cls, path: str) -> List[QuoteModel]:
         """Parse input file into list of QuoteModel objects.
 
-        Arguments:
+        Parameters:
         path {str} : The path of the input file to be tested.
 
         Returns
@@ -36,7 +36,7 @@ class DOCXIngestor(IngestorInterface):
         document = Document(path)
         for paragraph in document.paragraphs:
             if paragraph.text:
-                body, arthor = paragraph.text.split("-")
+                body, author = paragraph.text.split("-")
                 body = body.replace("\"", "")
-                quotes.append(QuoteModel(body, arthor))
+                quotes.append(QuoteModel(body, author))
         return quotes

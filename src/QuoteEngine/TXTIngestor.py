@@ -19,7 +19,7 @@ class TXTIngestor(IngestorInterface):
     def parse(cls, path: str) -> List[QuoteModel]:
         """Parse input file into list of QuoteModel objects.
 
-        Arguments:
+        Parameters:
         path {str} : The path of the input file to be tested.
 
         Returns
@@ -35,9 +35,9 @@ class TXTIngestor(IngestorInterface):
         with open(path, 'r') as input_file:
             row = input_file.readline().strip()
             while row:
-                body, arthor = row.split("-")
+                body, author = row.split("-")
                 body = body.replace("\"", "")
-                quotes.append(QuoteModel(body, arthor))
+                quotes.append(QuoteModel(body, author))
                 row = input_file.readline().strip()
 
         return quotes

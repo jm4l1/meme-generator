@@ -20,7 +20,7 @@ class PDFIngestor(IngestorInterface):
     def parse(cls, path: str) -> List[QuoteModel]:
         """Parse input file into list of QuoteModel objects.
 
-        Arguments:
+        Parameters:
         path {str} : The path of the input file to be tested.
 
         Returns
@@ -39,8 +39,8 @@ class PDFIngestor(IngestorInterface):
             output = command.stdout.decode(
                 'utf-8').strip().strip().split(" \"")
             for row in output:
-                body, arthor = row.text.split("-")
+                body, author = row.text.split("-")
                 body = body.replace("\"", "")
-                quotes.append(QuoteModel(body, arthor))
+                quotes.append(QuoteModel(body, author))
         except:
             raise("Error while parsing")

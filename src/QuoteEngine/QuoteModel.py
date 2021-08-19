@@ -7,7 +7,7 @@ class QuoteModel():
     def __init__(self, body: str, author: str) -> None:
         """Create a QouteModel.
 
-        Arguments:
+        Parameters:
         body {str} : The body text of the quote.
         author {str} : The author of the quote.
 

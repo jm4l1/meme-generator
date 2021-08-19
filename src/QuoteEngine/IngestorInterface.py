@@ -25,7 +25,7 @@ class IngestorInterface(ABC):
     def can_ingest(cls, path: str) -> bool:
         """Determine if give file can be ingested by the Interface implementation.
 
-        Arguments:
+        Parameters:
         path {str} : The path of the input file to be tested.
 
         Returns
@@ -46,7 +46,7 @@ class IngestorInterface(ABC):
     def parse(cls, path: str) -> List[QuoteModel]:
         """Parse input file into list of QuoteModel objects.
 
-        Arguments:
+        Parameters:
         path {str} : The path of the input file to be tested.
 
         Returns
