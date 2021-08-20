@@ -26,6 +26,9 @@ Implementation works with Linux and MacOS
 
 ```
 └── src
+    ├── app.py
+    ├── meme.py
+    ├── test.py
     ├── MemeEngine
     │   ├── MemeEngine.py
     │   ├── __init__.py
@@ -42,11 +45,9 @@ Implementation works with Linux and MacOS
     │   ├── DogQuotes
     │   ├── SimpleLines
     │   └── photos
-    ├── app.py
     ├── fonts
-    ├── meme.py
+    ├── static
     ├── templates
-    ├── test.py
     └── tmp
 ```
 
