@@ -50,4 +50,4 @@ if __name__ == "__main__":
     parser.add_argument('author', type=str,
                         help="quote author to add to the image")
     args = parser.parse_args()
-    generate_meme([args.path], args.body, args.author)
+    print(generate_meme([args.path], args.body, args.author))
