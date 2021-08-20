@@ -37,10 +37,12 @@ class PDFIngestor(IngestorInterface):
             command = run(['pdftotext', '-enc', 'UTF-8', '-eol', 'mac',
                            path, '-'], stdout=PIPE)
             output = command.stdout.decode(
-                'utf-8').strip().strip().split(" \"")
+                'utf-8').strip().split(" \"")
             for row in output:
-                body, author = row.text.split("-")
+                body, author = row.split("-")
                 body = body.replace("\"", "")
                 quotes.append(QuoteModel(body, author))
-        except:
-            raise("Error while parsing")
+            return quotes
+        except Exception as e:
+            print(e)
+            raise Exception("Error while parsing")

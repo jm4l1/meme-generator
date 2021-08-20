@@ -34,7 +34,7 @@ class Ingestor(IngestorInterface):
                     return ingestor.parse(path)
                 except CannotIngestException as e:
                     return e
-                except:
+                except Exception as e:
                     raise Exception("Unable to parse file")
-            else:
-                raise CannotIngestException("File cannot be ingested")
+        else:
+            raise CannotIngestException("File cannot be ingested")
