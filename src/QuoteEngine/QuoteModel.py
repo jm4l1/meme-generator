@@ -21,7 +21,7 @@ class QuoteModel():
         self.author = author
 
     def __str__(self) -> str:
-        """String representation of quote.
+        """Print readable string representation of quote.
 
         Parameters:
         None
@@ -35,7 +35,7 @@ class QuoteModel():
         return f'"{self.body}" - {self.author}'
 
     def __repr__(self) -> str:
-        """String representation of quote.
+        """Print machine readable representation of quote.
 
         Parameters:
         None
