@@ -19,3 +19,31 @@ class QuoteModel():
         """
         self.body = body
         self.author = author
+
+    def __str__(self) -> str:
+        """String representation of quote.
+
+        Parameters:
+        None
+
+        Returns:
+        str : Quote in the for '{body}' - {author}
+
+        Raises:
+        None
+        """
+        return f'"{self.body}" - {self.author}'
+
+    def __repr__(self) -> str:
+        """String representation of quote.
+
+        Parameters:
+        None
+
+        Returns:
+        str : QuoteModel(body={body},author={author})
+
+        Raises:
+        None
+        """
+        return f'QuoteModel(body={self.body},author={self.author})'
