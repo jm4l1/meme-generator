@@ -4,3 +4,5 @@ __MACOSX/
 __pycache__/
 src/static/*.png
 src/static/*.jpg
+src/tmp/*.png
+src/tmp/*.jpg
