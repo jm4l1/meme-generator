@@ -47,13 +47,13 @@ class MemeEngine():
 
         # add text
         draw = ImageDraw.Draw(img)
-        print(FONT_PATH)
         font = ImageFont.truetype(
-            f'{FONT_PATH}/Roboto-BoldItalic.ttf', size=40)
+            f'{FONT_PATH}/Roboto-BoldItalic.ttf', size=30)
         draw.text((10, height/2),
                   f'{text} - {author}', fill='white', font=font)
 
         # save image
-        img.save(f'{self.out_path}/{img_path.split("/")[-1]}')
+        meme_path = f'{self.out_path}/{img_path.split("/")[-1]}'
+        img.save(meme_path)
         # return image path
-        return img_path
+        return meme_path
